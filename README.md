@@ -1,53 +1,53 @@
-# DA-Portfolio
-Portfolio Projects
-## Sales Insights Data Analysis Project
+# Data Analyst Project: HR Analytics in Power BI 
 
-### Data Analysis Using SQL
+## Project Overview
 
-1. Show all customer records
+This guide provides an overview of creating a data analyst project for beginners using HR analytics as an example. The project utilizes Power BI to build a dashboard for visualizing and analyzing employee data.
 
-    `SELECT * FROM customers;`
+> ### Tools: Power BI, Excel
 
-1. Show total number of customers
+### Key Features
 
-    `SELECT count(*) FROM customers;`
+- HR Analytics Dashboard: Visualize HR data like attendance, codes, and performance.
+- Data Cleaning and Transformation: Process and prepare data for analysis.
+- Metric Creation: Calculate key performance indicators (KPIs) for HR insights.
+- Dashboard Design: Layout and present data for effective communication.
+- Dynamic Updates: Automate data refresh and set up alerts for proactive monitoring.
+- Sharing and Access Control: Share dashboards securely with different user permissions.
 
-1. Show transactions for Chennai market (market code for chennai is Mark001
+### Video Summaries
 
-    `SELECT * FROM transactions where market_code='Mark001';`
+#### Introduction & Problem Statement
 
-1. Show distrinct product codes that were sold in chennai
+- Series overview and project goals.
+- Introduction to data set and privacy considerations.
 
-    `SELECT distinct product_code FROM transactions where market_code='Mark001';`
+#### Data Cleaning and Analysis
 
-1. Show transactions where currency is US dollars
+- Understanding client's HR-related queries.
+- Importing data into Power BI and cleaning process.
+- Creating basic visualizations for initial insights.
 
-    `SELECT * from transactions where currency="USD"`
+#### Data Gathering and Transformation
 
-1. Show transactions in 2020 join by date table
+- Combining data from multiple Excel sheets with different formats.
+- Power Query techniques for data merging and manipulation.
+- Challenges and skills for data analysts.
 
-    `SELECT transactions.*, date.* FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020;`
+#### Creating Metrics in Power BI
 
-1. Show total revenue in year 2020,
+- Understanding and defining different metrics.
+- Creating specific metrics like work-from-home and sick leave percentages.
+- Utilizing calculated columns and measures for accurate data representation.
 
-    `SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and transactions.currency="INR\r" or transactions.currency="USD\r";`
-	
-1. Show total revenue in year 2020, January Month,
+#### Building the HR Analytics Dashboard
 
-    `SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and and date.month_name="January" and (transactions.currency="INR\r" or transactions.currency="USD\r");`
+- Effective dashboard design principles and user experience.
+- Using visuals, filters, and trends for data exploration and storytelling.
+- Creating an MVP dashboard for stakeholder feedback and future iterations.
 
-1. Show total revenue in year 2020 in Chennai
+#### Making the Dashboard Dynamic and Informative
 
-    `SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020
-and transactions.market_code="Mark001";`
-
-
-Data Analysis Using Power BI
-============================
-
-1. Formula to create norm_amount column
-
-`= Table.AddColumn(#"Filtered Rows", "norm_amount", each if [currency] = "USD" or [currency] ="USD#(cr)" then [sales_amount]*75 else [sales_amount], type any)`
-
-
-
+- Setting up automatic data refresh for real-time insights.
+- Adding alerts for proactive monitoring and notifications.
+- Sharing dashboards securely with different access levels for relevant users.
