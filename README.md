@@ -36,4 +36,4 @@
 - Using visuals, filters, and trends for data exploration and storytelling.
 - Creating a dashboard for stakeholder feedback and future iterations.
   
-
+![Dashboard](https://github.com/hbkagitha/DA-Portfolio_PowerBI-HRAnalytics/blob/main/HR%20dashboard.png)
