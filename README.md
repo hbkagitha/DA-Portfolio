@@ -26,7 +26,7 @@
 
 #### Creating Metrics in Power BI
 
-- Understanding and defining different metrics.
+- Understanding and defining different metrics like presence%,WFH% and Sickleave%.
 - Creating specific metrics like work-from-home and sick leave percentages.
 - Utilizing calculated columns and measures for accurate data representation.
 
@@ -35,4 +35,5 @@
 - Effective dashboard design principles and user experience.
 - Using visuals, filters, and trends for data exploration and storytelling.
 - Creating a dashboard for stakeholder feedback and future iterations.
+  
 
